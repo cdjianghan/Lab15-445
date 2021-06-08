@@ -54,8 +54,6 @@ class LRUReplacer : public Replacer {
 
   size_t Size() override;
 
-  void travel();
-
  private:
   size_t numsPages;
 

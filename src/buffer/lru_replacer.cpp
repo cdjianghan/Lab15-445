@@ -69,12 +69,4 @@ void LRUReplacer::Unpin(frame_id_t frame_id) {
 
 size_t LRUReplacer::Size() { return head->id; }
 
-void LRUReplacer::travel() {
-  node *p = head->next;
-  while (p != head) {
-    std::cout << p->id << std::endl;
-    p = p->next;
-  }
-}
-
 }  // namespace bustub
