@@ -16,6 +16,7 @@
 #include <mutex>
 #include <unordered_map>
 
+
 namespace bustub {
 
 BufferPoolManager::BufferPoolManager(size_t pool_size, DiskManager *disk_manager, LogManager *log_manager)
@@ -43,85 +44,110 @@ Page *BufferPoolManager::FetchPageImpl(page_id_t page_id) {
   // 2.     If R is dirty, write it back to the disk.
   // 3.     Delete R from the page table and insert P.
   // 4.     Update P's metadata, read in the page content from disk, and then return a pointer to P.
+  
   std::lock_guard<std::mutex> lock(latch_);
 
+
+  for(int i = 0 ; i < (int)pool_size_;i++){
+    LOG_DEBUG(" in buffer pool page : %d",pages_[i].GetPageId());
+  }
+  for(auto i = page_table_.begin();i != page_table_.end();i++){
+    LOG_DEBUG("walk page_table key:%d value:%d",i->first,i->second);
+  }
+
+
   auto ans = page_table_.find(page_id);
-
+  frame_id_t frame_id = -1;
+  //exist
   if (ans != page_table_.end()) {
-    pages_[page_table_[page_id]].pin_count_++;
-    replacer_->Pin(page_table_[page_id]);
-    return &pages_[page_table_[page_id]];
+    frame_id = page_table_[page_id];
+    pages_[frame_id].pin_count_++;
+    replacer_->Pin(frame_id);
+    LOG_DEBUG("FetchPageImpl exist %d", (int)page_id);
+    return &pages_[frame_id];
+  }
+  //not exist
+  if (!free_list_.empty()) {
+    frame_id = free_list_.front();
+    free_list_.pop_front();
+    LOG_DEBUG("FetchPageImpl not exist but free_list %d", (int)page_id);
+  }else {
+
+    bool allpined = true;
+    for(size_t i = 0 ; i < pool_size_ ; i++){
+      if(pages_[i].pin_count_ == 0){allpined = false;}
+    }
+    if(allpined){
+    LOG_DEBUG("NewPageImpl but allpined :%d", (int)page_id);
+    return nullptr;
   }
 
-  if (ans == page_table_.end()) {
-    if (!free_list_.empty()) {
-      frame_id_t frame_id = free_list_.front();
-      free_list_.pop_front();
-      page_table_[page_id] = frame_id;
+    if (replacer_->Victim(&frame_id)) {
+    if (frame_id == -1) {
+      return nullptr;
     }
-
-    frame_id_t victim = -1;
-    if (free_list_.empty() && replacer_->Victim(&victim)) {
-      if (victim == -1) {
-        return nullptr;
-      }
-      if (pages_[victim].IsDirty()) {
-        FlushPageImpl(page_id);
-      }
-      page_table_[page_id] = victim;
-      page_table_.erase(pages_[victim].GetPageId());
+    if (pages_[frame_id].IsDirty()) {
+      disk_manager_->WritePage(pages_[frame_id].GetPageId(), pages_[frame_id].GetData());
     }
-
-    pages_[page_table_[page_id]].ResetMemory();
-    disk_manager_->ReadPage(page_id, pages_[page_table_[page_id]].data_);
-    pages_[page_table_[page_id]].page_id_ = page_id;
-    pages_[page_table_[page_id]].pin_count_++;
-
-    return &pages_[page_table_[page_id]];
+    page_table_.erase(pages_[frame_id].GetPageId());
+    LOG_DEBUG("FetchPageImpl not exist but victim %d", (int)page_id);
   }
+
+  }
+
+  pages_[frame_id].ResetMemory();
+  disk_manager_->ReadPage(page_id, pages_[frame_id].GetData());
+  // pages_[frame_id].is_dirty_ = true;
+  LOG_DEBUG("FetchPageSuccess %d,Fetch Page data:%s", pages_[frame_id].GetPageId(),pages_[frame_id].GetData());
+  pages_[frame_id].page_id_ = page_id;
+  page_table_[page_id] = frame_id;
+  pages_[frame_id].pin_count_ = 1;
+
+  return &pages_[frame_id];
+  
 
   return nullptr;
 }
 
 bool BufferPoolManager::UnpinPageImpl(page_id_t page_id, bool is_dirty) {
   std::lock_guard<std::mutex> lock(latch_);
-  auto ans = page_table_.find(page_id);
 
+  auto ans = page_table_.find(page_id);
   if (ans == page_table_.end()) {
     return false;
   }
 
-  if (pages_[page_table_[page_id]].pin_count_ <= 0) {
+  frame_id_t frame_id = page_table_[page_id];
+  if (pages_[frame_id].pin_count_ <= 0) {
     return false;
   }
+
+  if(pages_[frame_id].pin_count_ > 0){
+    pages_[frame_id].pin_count_--;
+    replacer_->Unpin(frame_id);
+  }
+
   if (is_dirty) {
-    pages_[page_table_[page_id]].is_dirty_ = true;
+    pages_[frame_id].is_dirty_ = true;
   }
-
-  pages_[page_table_[page_id]].pin_count_--;
-
-  if (pages_[page_table_[page_id]].pin_count_ == 0) {
-    replacer_->Unpin(page_id);
-  }
+  LOG_DEBUG("UnpinPageImpl %d", (int)page_id);
   return true;
 }
 
 bool BufferPoolManager::FlushPageImpl(page_id_t page_id) {
-  std::lock_guard<std::mutex> lock(latch_);
 
   // Make sure you call DiskManager::WritePage!
-  if(page_table_.find(page_id) == page_table_.end()){
-    return false;
-  }
+  // if(page_table_.find(page_id) == page_table_.end()){
+  //   return false;
+  // }
   frame_id_t frame_id = page_table_[page_id];
-  if(pages_[frame_id].IsDirty()){
-    disk_manager_->WritePage(page_id, pages_[frame_id].GetData());
-    pages_[frame_id].is_dirty_ = false;
-  }
+ 
+  LOG_DEBUG("FlushPageSuccess %d,Flush Page data:%s", pages_[frame_id].GetPageId(),pages_[frame_id].GetData());
+  
+  disk_manager_->WritePage(page_id, pages_[frame_id].GetData());
+  pages_[frame_id].is_dirty_ = false;
+  
   return true;
-
-
-
 
 }
 
@@ -136,36 +162,38 @@ Page *BufferPoolManager::NewPageImpl(page_id_t *page_id) {
   // 4.   Set the page ID output parameter. Return a pointer to P.
 
   std::lock_guard<std::mutex> lock(latch_);
-  size_t i;
-  for (i = 0; i < pool_size_; i++) {
-    if (pages_[i].pin_count_ == 0) {
-      break;
-    }
+  frame_id_t frame_id;
+  *page_id = disk_manager_->AllocatePage();
+  bool allpined = true;
+  for(size_t i = 0 ; i < pool_size_ ; i++){
+      if(pages_[i].pin_count_ == 0){allpined = false;}
   }
-  if (i == pool_size_) {
+  if(allpined){
+    LOG_DEBUG("NewPageImpl but allpined :%d", (int)*page_id);
     return nullptr;
   }
-  *page_id = disk_manager_->AllocatePage();
-
+  
+  LOG_DEBUG("NewPageImpl %d", (int)*page_id);
   if (!free_list_.empty()) {
-    frame_id_t frame_id = free_list_.front();
+    frame_id = free_list_.front();
     free_list_.pop_front();
-    page_table_[*page_id] = frame_id;
-  }
-
-  page_id_t victim = -1;
-  if (free_list_.empty() && replacer_->Victim(&victim)) {
-    if (pages_[victim].is_dirty_) {
-      FlushPageImpl(*page_id);
+  }else {
+    
+    if (replacer_->Victim(&frame_id)) {
+    if (pages_[frame_id].is_dirty_) {
+      LOG_DEBUG("I write a dirty page: %d,it's data is %s",pages_[frame_id].GetPageId(),pages_[frame_id].GetData());
+      disk_manager_->WritePage(pages_[frame_id].GetPageId(), pages_[frame_id].GetData());
     }
-    page_table_[*page_id] = victim;
-    page_table_.erase(pages_[victim].GetPageId());
+    page_table_.erase(pages_[frame_id].GetPageId());
+  }
   }
 
-  pages_[page_table_[*page_id]].ResetMemory();
-  pages_[page_table_[*page_id]].page_id_ = *page_id;
-  pages_[page_table_[*page_id]].pin_count_ = 1;
-  return &pages_[page_table_[*page_id]];
+  page_table_[*page_id] = frame_id;
+  pages_[frame_id].ResetMemory();
+  pages_[frame_id].page_id_ = *page_id;
+  pages_[frame_id].pin_count_ = 1;
+  pages_[frame_id].is_dirty_ = false;
+  return &pages_[frame_id];
 }
 
 bool BufferPoolManager::DeletePageImpl(page_id_t page_id) {
@@ -176,16 +204,17 @@ bool BufferPoolManager::DeletePageImpl(page_id_t page_id) {
   // 3.   Otherwise, P can be deleted. Remove P from the page table, reset its metadata and return it to the free list.
   // auto ans = page_table_.find(page_id);
   std::lock_guard<std::mutex> lock(latch_);
+  frame_id_t frame_id = page_table_[page_id];
   if (page_table_.find(page_id) == page_table_.end()) {
     return true;
   }
-  if (pages_[page_table_[page_id]].pin_count_ != 0) {
+  if (pages_[frame_id].pin_count_ != 0) {
     return false;
   }
 
-  pages_[page_table_[page_id]].ResetMemory();
-  free_list_.push_front(page_table_[page_id]);
-  pages_[page_table_[page_id]].page_id_ = INVALID_PAGE_ID;
+  pages_[frame_id].ResetMemory();
+  free_list_.push_front(frame_id);
+  pages_[frame_id].page_id_ = INVALID_PAGE_ID;
   page_table_.erase(page_id);
 
   return true;

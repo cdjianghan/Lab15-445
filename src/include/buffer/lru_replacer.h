@@ -60,6 +60,7 @@ class LRUReplacer : public Replacer {
   std::unordered_map<frame_id_t, struct node *> tables;
 
   struct node *head;
+  std::mutex mutex;
 };
 
 }  // namespace bustub

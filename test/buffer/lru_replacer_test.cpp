@@ -36,7 +36,7 @@ TEST(LRUReplacerTest, SampleTest) {
   lru_replacer.Unpin(1);
   EXPECT_EQ(6, lru_replacer.Size());
 
-  // Scenario: get three victims from the clock.
+  // Scenario: get three victims from the lru.
   int value;
   lru_replacer.Victim(&value);
   EXPECT_EQ(1, value);
@@ -62,6 +62,7 @@ TEST(LRUReplacerTest, SampleTest) {
   lru_replacer.Victim(&value);
   EXPECT_EQ(4, value);
 }
+
 
 TEST(LRUReplacerTest, Victim) {
   auto lru_replacer = new LRUReplacer(1010);
@@ -209,6 +210,7 @@ TEST(LRUReplacerTest, Pin) {
   delete lru_replacer;
 }
 
+
 TEST(LRUReplacerTest, Size) {
   auto lru_replacer = new LRUReplacer(10010);
 
@@ -341,5 +343,6 @@ TEST(LRUReplacerTest, IntegratedTest) {
 
   delete lru_replacer;
 }
+
 
 }  // namespace bustub

@@ -30,6 +30,7 @@ LRUReplacer::~LRUReplacer() {
 }
 
 bool LRUReplacer::Victim(frame_id_t *frame_id) {
+  std::lock_guard<std::mutex> lock(mutex);
   if (head->next == head) {
     return false;
   }
@@ -45,6 +46,7 @@ bool LRUReplacer::Victim(frame_id_t *frame_id) {
 }
 
 void LRUReplacer::Pin(frame_id_t frame_id) {
+  std::lock_guard<std::mutex> lock(mutex);
   if (tables.find(frame_id) != tables.end()) {
     tables[frame_id]->next->prev = tables[frame_id]->prev;
     tables[frame_id]->prev->next = tables[frame_id]->next;
@@ -55,6 +57,7 @@ void LRUReplacer::Pin(frame_id_t frame_id) {
 }
 
 void LRUReplacer::Unpin(frame_id_t frame_id) {
+  std::lock_guard<std::mutex> lock(mutex);
   if (tables.find(frame_id) != tables.end()) {
     return;
   }
@@ -67,6 +70,8 @@ void LRUReplacer::Unpin(frame_id_t frame_id) {
   head->id++;
 }
 
-size_t LRUReplacer::Size() { return head->id; }
+size_t LRUReplacer::Size() { 
+  std::lock_guard<std::mutex> lock(mutex);
+  return head->id; }
 
 }  // namespace bustub
