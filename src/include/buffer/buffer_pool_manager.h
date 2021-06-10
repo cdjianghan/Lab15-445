@@ -17,10 +17,10 @@
 #include <unordered_map>
 
 #include "buffer/lru_replacer.h"
+#include "common/logger.h"
 #include "recovery/log_manager.h"
 #include "storage/disk/disk_manager.h"
 #include "storage/page/page.h"
-#include "common/logger.h"
 
 namespace bustub {
 

@@ -63,7 +63,6 @@ TEST(LRUReplacerTest, SampleTest) {
   EXPECT_EQ(4, value);
 }
 
-
 TEST(LRUReplacerTest, Victim) {
   auto lru_replacer = new LRUReplacer(1010);
 
@@ -210,7 +209,6 @@ TEST(LRUReplacerTest, Pin) {
   delete lru_replacer;
 }
 
-
 TEST(LRUReplacerTest, Size) {
   auto lru_replacer = new LRUReplacer(10010);
 
@@ -343,6 +341,5 @@ TEST(LRUReplacerTest, IntegratedTest) {
 
   delete lru_replacer;
 }
-
 
 }  // namespace bustub

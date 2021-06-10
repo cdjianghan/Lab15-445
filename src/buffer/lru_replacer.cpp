@@ -70,8 +70,9 @@ void LRUReplacer::Unpin(frame_id_t frame_id) {
   head->id++;
 }
 
-size_t LRUReplacer::Size() { 
+size_t LRUReplacer::Size() {
   std::lock_guard<std::mutex> lock(mutex);
-  return head->id; }
+  return head->id;
+}
 
 }  // namespace bustub
