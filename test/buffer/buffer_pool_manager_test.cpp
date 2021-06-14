@@ -933,8 +933,8 @@ TEST(BufferPoolManagerConcurrencyTest, HardTest_3) {
 //             EXPECT_EQ(0, std::strcmp(std::to_string(page_ids[j]).c_str(), (page->GetData())));
 //             EXPECT_EQ(1, bpm->UnpinPage(page_ids[j], false, nullptr));
 //           } else {
-//             EXPECT_EQ(0, std::strcmp((std::string("Hard") + std::to_string(page_ids[j])).c_str(), (page->GetData())));
-//             EXPECT_EQ(1, bpm->UnpinPage(page_ids[j], false, nullptr));
+//             EXPECT_EQ(0, std::strcmp((std::string("Hard") + std::to_string(page_ids[j])).c_str(),
+//             (page->GetData()))); EXPECT_EQ(1, bpm->UnpinPage(page_ids[j], false, nullptr));
 //           }
 //           j = (j + 1);
 

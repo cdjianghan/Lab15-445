@@ -55,6 +55,7 @@ Page *BufferPoolManager::FetchPageImpl(page_id_t page_id) {
 
   auto ans = page_table_.find(page_id);
   frame_id_t frame_id = -1;
+  // bool allpined = true;
   // exist
   if (ans != page_table_.end()) {
     frame_id = page_table_[page_id];
@@ -70,27 +71,30 @@ Page *BufferPoolManager::FetchPageImpl(page_id_t page_id) {
     free_list_.pop_front();
     // LOG_DEBUG("Fetch Page:%d not exist but free_list ", (int)page_id);
   } else {
-    bool allpined = true;
-    for (size_t i = 0; i < pool_size_; i++) {
-      if (pages_[i].pin_count_ == 0) {
-        allpined = false;
-      }
-    }
-    if (allpined) {
-      // LOG_DEBUG("Fetch Page:%d not exist and allpined ", (int)page_id);
-      return nullptr;
-    }
+    // too slow ------------------------------------------------------------------------------------
+    // bool allpined = true;
+
+    // for (size_t i = 0; i < pool_size_; i++) {
+    //   if (pages_[i].pin_count_ == 0) {
+    //     allpined = false;
+    //   }
+    // }
+    // too slow ------------------------------------------------------------------------------------
+
+    // if (allpined) {
+    //   // LOG_DEBUG("Fetch Page:%d not exist and allpined ", (int)page_id);
+    //   return nullptr;
+    // }
 
     if (replacer_->Victim(&frame_id)) {
-      if (frame_id == -1) {
-        return nullptr;
-      }
       if (pages_[frame_id].IsDirty()) {
         pages_[frame_id].is_dirty_ = false;
         disk_manager_->WritePage(pages_[frame_id].GetPageId(), pages_[frame_id].GetData());
       }
       page_table_.erase(pages_[frame_id].GetPageId());
       // LOG_DEBUG("Fetch Page:%d not exist but victim:%d", (int)page_id,(int)pages_[frame_id].GetPageId());
+    } else {
+      return nullptr;
     }
   }
 
@@ -170,16 +174,19 @@ Page *BufferPoolManager::NewPageImpl(page_id_t *page_id) {
   std::lock_guard<std::mutex> lock(latch_);
   frame_id_t frame_id;
   *page_id = disk_manager_->AllocatePage();
-  bool allpined = true;
-  for (size_t i = 0; i < pool_size_; i++) {
-    if (pages_[i].pin_count_ == 0) {
-      allpined = false;
-    }
-  }
-  if (allpined) {
-    // LOG_DEBUG("New Page:%d but allpined ", (int)*page_id);
-    return nullptr;
-  }
+
+  // too slow ------------------------------------------------------------------------------------
+  // bool allpined = true;
+  // for (size_t i = 0; i < pool_size_; i++) {
+  //   if (pages_[i].pin_count_ == 0) {
+  //     allpined = false;
+  //   }
+  // }
+  // if (allpined) {
+  //   // LOG_DEBUG("New Page:%d but allpined ", (int)*page_id);
+  //   return nullptr;
+  // }
+  // too slow ------------------------------------------------------------------------------------
 
   // LOG_DEBUG("New Page: %d", (int)*page_id);
   if (!free_list_.empty()) {
@@ -194,6 +201,8 @@ Page *BufferPoolManager::NewPageImpl(page_id_t *page_id) {
         disk_manager_->WritePage(pages_[frame_id].GetPageId(), pages_[frame_id].GetData());
       }
       page_table_.erase(pages_[frame_id].GetPageId());
+    } else {
+      return nullptr;
     }
   }
 
