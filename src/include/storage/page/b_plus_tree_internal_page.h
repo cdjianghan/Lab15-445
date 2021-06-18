@@ -61,6 +61,6 @@ class BPlusTreeInternalPage : public BPlusTreePage {
   void CopyNFrom(MappingType *items, int size, BufferPoolManager *buffer_pool_manager);
   void CopyLastFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
   void CopyFirstFrom(const MappingType &pair, BufferPoolManager *buffer_pool_manager);
-  MappingType array[0];  //这里分配的其实是一个地址，可伸缩性数组
+  MappingType array[0];  //这个就相当于是动态数组
 };
 }  // namespace bustub

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fPIC -Wall -Wextra -Werror -march=native -Wno-unused-parameter -Wno-attributes -g -O0 -ggdb -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls  -fPIC -shared -Wl,-soname,libthirdparty_murmur3.so -o ../lib/libthirdparty_murmur3.so CMakeFiles/thirdparty_murmur3.dir/__/third_party/murmur3/MurmurHash3.cpp.o 
