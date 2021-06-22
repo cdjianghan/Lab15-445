@@ -61,7 +61,7 @@ TEST(BptTreeTest, UnitTest) {
   GenericComparator<8> comparator(key_schema);
 
   DiskManager *disk_manager = new DiskManager("test.db");
-  BufferPoolManager *bpm = new BufferPoolManager(100, disk_manager);
+  BufferPoolManager *bpm = new BufferPoolManager(10, disk_manager);
   // create and fetch header_page
   page_id_t page_id;
   auto header_page = bpm->NewPage(&page_id);

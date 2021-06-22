@@ -455,43 +455,44 @@ TEST(BufferPoolManagerTest, IsDirty) {
   DiskManager *disk_manager = new DiskManager("test.db");
   auto bpm = new BufferPoolManager(1, disk_manager);
 
+  LOG_DEBUG("part1");
   // Make new page and write to it
   page_id_t pageid0;
   auto page0 = bpm->NewPage(&pageid0);
   ASSERT_NE(nullptr, page0);
-  EXPECT_EQ(0, page0->IsDirty());
+  EXPECT_EQ(0, page0->IsDirty()) << 1 << std::endl;
   strcpy(page0->GetData(), "page0");  // NOLINT
-  EXPECT_EQ(1, bpm->UnpinPage(pageid0, true));
-
+  EXPECT_EQ(1, bpm->UnpinPage(pageid0, true)) << 1 << std::endl;
+  LOG_DEBUG("part2");
   // Fetch again but don't write. Assert it is still marked as dirty
   page0 = bpm->FetchPage(pageid0);
   ASSERT_NE(nullptr, page0);
-  EXPECT_EQ(1, page0->IsDirty());
-  EXPECT_EQ(1, bpm->UnpinPage(pageid0, false));
-
+  EXPECT_EQ(1, page0->IsDirty()) << 2 << std::endl;
+  EXPECT_EQ(1, bpm->UnpinPage(pageid0, false)) << 3 << std::endl;
+  LOG_DEBUG("part3");
   // Fetch and assert it is still dirty
   page0 = bpm->FetchPage(pageid0);
   ASSERT_NE(nullptr, page0);
-  EXPECT_EQ(1, page0->IsDirty());
-  EXPECT_EQ(1, bpm->UnpinPage(pageid0, false));
-
+  EXPECT_EQ(1, page0->IsDirty()) << 4 << std::endl;
+  EXPECT_EQ(1, bpm->UnpinPage(pageid0, false)) << 5 << std::endl;
+  LOG_DEBUG("part4");
   // Create a new page, assert it's not dirty
   page_id_t pageid1;
   auto page1 = bpm->NewPage(&pageid1);
   ASSERT_NE(nullptr, page1);
-  EXPECT_EQ(0, page1->IsDirty());
-
+  EXPECT_EQ(0, page1->IsDirty()) << 6 << std::endl;
+  LOG_DEBUG("part5");
   // Write to the page, and then delete it
   strcpy(page1->GetData(), "page1");  // NOLINT
-  EXPECT_EQ(1, bpm->UnpinPage(pageid1, true));
-  EXPECT_EQ(1, page1->IsDirty());
-  EXPECT_EQ(1, bpm->DeletePage(pageid1));
-
+  EXPECT_EQ(1, bpm->UnpinPage(pageid1, true)) << 7 << std::endl;
+  EXPECT_EQ(1, page1->IsDirty()) << 8 << std::endl;
+  EXPECT_EQ(1, bpm->DeletePage(pageid1)) << 9 << std::endl;
+  LOG_DEBUG("part6");
   // Fetch page 0 again, and confirm its not dirty
   page0 = bpm->FetchPage(pageid0);
   ASSERT_NE(nullptr, page0);
-  EXPECT_EQ(0, page0->IsDirty());
-
+  EXPECT_EQ(0, page0->IsDirty()) << 10 << std::endl;
+  LOG_DEBUG("part7");
   remove("test.db");
   remove("test.log");
   delete bpm;
