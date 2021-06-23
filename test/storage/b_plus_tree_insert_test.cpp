@@ -48,15 +48,14 @@ TEST(BPlusTreeTests, SplitTest) {
   index_key.SetFromInteger(1);
   auto leaf_node =
       reinterpret_cast<BPlusTreeLeafPage<GenericKey<8>, RID, GenericComparator<8>> *>(tree.FindLeafPage(index_key));
-  LOG_DEBUG("leaf_node initialized as : %d", leaf_node->GetPageId());
+  LOG_DEBUG("leaf_node initialized as : %d",leaf_node->GetPageId());
   ASSERT_NE(nullptr, leaf_node);
   EXPECT_EQ(1, leaf_node->GetSize());
   EXPECT_EQ(2, leaf_node->GetMaxSize());
 
   // Check the next 4 pages
   for (int i = 0; i < 4; i++) {
-    LOG_DEBUG("\n leaf_node :\n    page_id:%d\n    next_page_id:%d", leaf_node->GetPageId(),
-              leaf_node->GetNextPageId());
+    LOG_DEBUG("\n leaf_node :\n    page_id:%d\n    next_page_id:%d",leaf_node->GetPageId(),leaf_node->GetNextPageId());
     EXPECT_NE(INVALID_PAGE_ID, leaf_node->GetNextPageId());
     leaf_node = reinterpret_cast<BPlusTreeLeafPage<GenericKey<8>, RID, GenericComparator<8>> *>(
         bpm->FetchPage(leaf_node->GetNextPageId()));
@@ -79,7 +78,7 @@ TEST(BPlusTreeTests, SplitTest) {
  * increasing order. Check whether the key-value pair is valid
  * using GetValue
  */
-TEST(BPlusTreeTests, InsertTest1) {
+TEST(BPlusTreeTests, InsertTest) {
   // create KeyComparator and index schema
   Schema *key_schema = ParseCreateStatement("a bigint");
   GenericComparator<8> comparator(key_schema);
@@ -126,7 +125,9 @@ TEST(BPlusTreeTests, InsertTest1) {
   remove("test.log");
 }
 
-TEST(BPlusTreeTests, DISABLED_InsertTest1) {
+
+
+TEST(BPlusTreeTests, InsertTest1) {
   // create KeyComparator and index schema
   Schema *key_schema = ParseCreateStatement("a bigint");
   GenericComparator<8> comparator(key_schema);
@@ -185,7 +186,7 @@ TEST(BPlusTreeTests, DISABLED_InsertTest1) {
   remove("test.log");
 }
 
-TEST(BPlusTreeTests, DISABLED_InsertTest2) {
+TEST(BPlusTreeTests, InsertTest2) {
   // create KeyComparator and index schema
   Schema *key_schema = ParseCreateStatement("a bigint");
   GenericComparator<8> comparator(key_schema);
@@ -261,7 +262,7 @@ TEST(BPlusTreeTests, DISABLED_InsertTest2) {
  * a reversed order. Check whether the key-value pair is valid
  * using GetValue
  */
-TEST(BPlusTreeTests, InsertTest2) {
+TEST(BPlusTreeTests, InsertTest22) {
   // create KeyComparator and index schema
   Schema *key_schema = ParseCreateStatement("a bigint");
   GenericComparator<8> comparator(key_schema);
@@ -274,6 +275,7 @@ TEST(BPlusTreeTests, InsertTest2) {
   RID rid;
   // create transaction
   Transaction *transaction = new Transaction(0);
+
 
   // create and fetch header_page
   page_id_t page_id;
@@ -308,7 +310,8 @@ TEST(BPlusTreeTests, InsertTest2) {
   remove("test.log");
 }
 
-// TEST(BPlusTreeTests, ScaleTest) {
+
+//TEST(BPlusTreeTests, ScaleTest) {
 //  // create KeyComparator and index schema
 //  Schema *key_schema = ParseCreateStatement("a bigint");
 //  GenericComparator<8> comparator(key_schema);
@@ -375,6 +378,9 @@ TEST(BPlusTreeTests, InsertTest2) {
 //  remove("test.log");
 //}
 
+
+
+
 /*
  * Score: 30
  * Description: Insert a set of keys range from 1 to 10000 in
@@ -408,13 +414,13 @@ TEST(BPlusTreeTests, ScaleTest) {
   // randomized the insertion order
   auto rng = std::default_random_engine{};
   std::shuffle(keys.begin(), keys.end(), rng);
-  //  int i = 0;
+//  int i = 0;
   for (auto key : keys) {
     int64_t value = key & 0xFFFFFFFF;
     rid.Set(static_cast<int32_t>(key >> 32), value);
     index_key.SetFromInteger(key);
     tree.Insert(index_key, rid, transaction);
-    //    LOG_DEBUG("insert counts:%d,value:%d",i++,(int)value);
+//    LOG_DEBUG("insert counts:%d,value:%d",i++,(int)value);
   }
   std::vector<RID> rids;
   int i = 0;
@@ -422,12 +428,24 @@ TEST(BPlusTreeTests, ScaleTest) {
     rids.clear();
     index_key.SetFromInteger(key);
     tree.GetValue(index_key, &rids);
-    EXPECT_EQ(rids.size(), 1) << "bugs happens in :" << i << std::endl;
+    EXPECT_EQ(rids.size(), 1)<<"bugs happens in :"<<i<<std::endl;
 
     int64_t value = key & 0xFFFFFFFF;
     EXPECT_EQ(rids[0].GetSlotNum(), value);
     i++;
   }
+
+  std::vector<int64_t> remove_keys;
+  remove_keys.clear();
+  for (int64_t key = 1; key < scale; key++) {
+    remove_keys.push_back(key);
+  }
+  for (auto key : remove_keys) {
+    index_key.SetFromInteger(key);
+    tree.Remove(index_key);
+  }
+  EXPECT_EQ(true, tree.IsEmpty());
+
 
   bpm->UnpinPage(HEADER_PAGE_ID, true);
   delete key_schema;
