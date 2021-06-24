@@ -267,7 +267,7 @@ bool BPLUSTREE_TYPE::CoalesceOrRedistribute(N *node, Transaction *transaction) {
   }
   // 判断是否需要Redistribute还是Coalesce
   N *neighbor_node = reinterpret_cast<N *>(neighbor_page->GetData());
-  if (node->GetSize() + neighbor_node->GetSize() > node->GetMaxSize()) {
+  if (node->GetSize() + neighbor_node->GetSize() >= node->GetMaxSize()) {
     Redistribute(neighbor_node, node, index);
     buffer_pool_manager_->UnpinPage(ppid, true);
     buffer_pool_manager_->UnpinPage(neighbor_id, true);

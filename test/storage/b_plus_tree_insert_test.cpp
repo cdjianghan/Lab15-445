@@ -440,6 +440,9 @@ TEST(BPlusTreeTests, ScaleTest) {
   for (int64_t key = 1; key < scale; key++) {
     remove_keys.push_back(key);
   }
+
+  auto rng2 = std::default_random_engine{};
+  std::shuffle(remove_keys.begin(), remove_keys.end(), rng2);
   for (auto key : remove_keys) {
     index_key.SetFromInteger(key);
     tree.Remove(index_key);

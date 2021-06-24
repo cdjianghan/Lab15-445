@@ -256,6 +256,7 @@ TEST(BPlusTreeTests, DeleteTest2) {
 
 
    bpm->UnpinPage(HEADER_PAGE_ID, true);
+   delete key_schema;
    delete disk_manager;
    delete bpm;
    remove("test.db");
