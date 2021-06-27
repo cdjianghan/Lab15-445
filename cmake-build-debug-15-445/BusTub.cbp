@@ -439,8 +439,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/src/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tuple_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tuple_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="lru_replacer_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/lru_replacer_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -463,14 +463,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tuple_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 lru_replacer_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tuple_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tuple_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="lru_replacer_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/lru_replacer_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -493,687 +493,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tuple_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="type_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/type_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 type_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="type_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/type_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 type_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tmp_tuple_page_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tmp_tuple_page_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tmp_tuple_page_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tmp_tuple_page_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tmp_tuple_page_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tmp_tuple_page_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_delete_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_delete_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_delete_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_delete_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_delete_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_delete_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_insert_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_insert_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_insert_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_insert_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_insert_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_insert_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="recovery_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/recovery_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 recovery_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="recovery_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/recovery_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 recovery_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="build-tests">
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 build-tests"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_concurrent_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_concurrent_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_concurrent_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_concurrent_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_concurrent_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_concurrent_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="check-tests">
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 check-tests"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_print_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_print_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_print_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="b_plus_tree_print_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_print_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_print_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="hash_table_page_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/hash_table_page_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 hash_table_page_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="hash_table_page_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/hash_table_page_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 hash_table_page_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="clock_replacer_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/clock_replacer_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clock_replacer_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="clock_replacer_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/clock_replacer_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clock_replacer_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="disk_manager_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/disk_manager_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 disk_manager_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="disk_manager_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/disk_manager_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 disk_manager_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="catalog_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/catalog_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 catalog_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="catalog_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/catalog_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 catalog_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 lru_replacer_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1239,8 +559,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="lru_replacer_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/lru_replacer_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="grading_buffer_pool_manager_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_buffer_pool_manager_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1263,14 +583,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 lru_replacer_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_buffer_pool_manager_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="lru_replacer_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/lru_replacer_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="grading_buffer_pool_manager_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_buffer_pool_manager_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1293,14 +613,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 lru_replacer_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_buffer_pool_manager_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="transaction_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/transaction_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="grading_buffer_pool_manager_concurrency_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_buffer_pool_manager_concurrency_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1323,14 +643,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 transaction_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_buffer_pool_manager_concurrency_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="transaction_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/transaction_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="grading_buffer_pool_manager_concurrency_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_buffer_pool_manager_concurrency_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1353,7 +673,127 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 transaction_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_buffer_pool_manager_concurrency_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hash_table_page_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/hash_table_page_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 hash_table_page_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hash_table_page_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/hash_table_page_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 hash_table_page_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="b_plus_tree_print_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_print_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_print_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="b_plus_tree_print_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_print_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_print_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1419,66 +859,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="rwlatch_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/rwlatch_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 rwlatch_test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rwlatch_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/rwlatch_test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/jh/15-445/15-445Learning/src"/>
-					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
-					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
-					<Add directory="/usr/include/c++/9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
-					<Add directory="/usr/include/c++/9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 rwlatch_test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="hash_table_test">
 				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/hash_table_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
@@ -1534,6 +914,626 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 hash_table_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="b_plus_tree_concurrent_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_concurrent_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_concurrent_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="b_plus_tree_concurrent_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_concurrent_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_concurrent_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_bench_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_bench_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_bench_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_bench_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_bench_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_bench_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build-tests">
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 build-tests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="starter_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/starter_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 starter_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="starter_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/starter_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 starter_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recovery_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/recovery_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 recovery_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="recovery_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/recovery_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 recovery_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="clock_replacer_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/clock_replacer_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clock_replacer_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="clock_replacer_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/clock_replacer_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clock_replacer_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="b_plus_tree_insert_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_insert_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_insert_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="b_plus_tree_insert_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_insert_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_insert_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_clock_replacer_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_clock_replacer_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_clock_replacer_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_clock_replacer_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_clock_replacer_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_clock_replacer_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="check-tests">
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 check-tests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_checkpoint_1_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_checkpoint_1_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_checkpoint_1_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_checkpoint_1_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_checkpoint_1_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_checkpoint_1_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="transaction_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/transaction_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 transaction_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="transaction_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/transaction_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 transaction_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rwlatch_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/rwlatch_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 rwlatch_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rwlatch_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/rwlatch_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 rwlatch_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1599,8 +1599,8 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="starter_test">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/starter_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="b_plus_tree_delete_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_delete_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1623,14 +1623,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 starter_test"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_delete_test"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="starter_test/fast">
-				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/starter_test" prefix_auto="0" extension_auto="0"/>
+			<Target title="b_plus_tree_delete_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/b_plus_tree_delete_test" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -1653,7 +1653,427 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 starter_test/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 b_plus_tree_delete_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_checkpoint_2_sequential_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_checkpoint_2_sequential_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_checkpoint_2_sequential_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_checkpoint_2_sequential_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_checkpoint_2_sequential_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_checkpoint_2_sequential_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="catalog_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/catalog_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 catalog_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="catalog_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/catalog_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 catalog_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_memory_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_memory_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_memory_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="grading_b_plus_tree_memory_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/grading_b_plus_tree_memory_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 grading_b_plus_tree_memory_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="disk_manager_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/disk_manager_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 disk_manager_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="disk_manager_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/disk_manager_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 disk_manager_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tmp_tuple_page_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tmp_tuple_page_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tmp_tuple_page_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tmp_tuple_page_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tmp_tuple_page_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tmp_tuple_page_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="type_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/type_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 type_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="type_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/type_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 type_test/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tuple_test">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tuple_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tuple_test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tuple_test/fast">
+				<Option output="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/tuple_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/jh/15-445/15-445Learning/src"/>
+					<Add directory="/home/jh/15-445/15-445Learning/src/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/test/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/third_party"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googletest"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock/include"/>
+					<Add directory="/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/googletest-src/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 tuple_test/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/jh/15-445/15-445Learning/cmake-build-debug-15-445/test/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1828,6 +2248,15 @@
 		<Unit filename="/home/jh/15-445/15-445Learning/test/buffer/clock_replacer_test.cpp">
 			<Option target="clock_replacer_test"/>
 		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/buffer/grading_buffer_pool_manager_concurrency_test.cpp">
+			<Option target="grading_buffer_pool_manager_concurrency_test"/>
+		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/buffer/grading_buffer_pool_manager_test.cpp">
+			<Option target="grading_buffer_pool_manager_test"/>
+		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/buffer/grading_clock_replacer_test.cpp">
+			<Option target="grading_clock_replacer_test"/>
+		</Unit>
 		<Unit filename="/home/jh/15-445/15-445Learning/test/buffer/lru_replacer_test.cpp">
 			<Option target="lru_replacer_test"/>
 		</Unit>
@@ -1872,6 +2301,18 @@
 		</Unit>
 		<Unit filename="/home/jh/15-445/15-445Learning/test/storage/disk_manager_test.cpp">
 			<Option target="disk_manager_test"/>
+		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/storage/grading_b_plus_tree_bench_test.cpp">
+			<Option target="grading_b_plus_tree_bench_test"/>
+		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/storage/grading_b_plus_tree_checkpoint_1_test.cpp">
+			<Option target="grading_b_plus_tree_checkpoint_1_test"/>
+		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/storage/grading_b_plus_tree_checkpoint_2_sequential_test.cpp">
+			<Option target="grading_b_plus_tree_checkpoint_2_sequential_test"/>
+		</Unit>
+		<Unit filename="/home/jh/15-445/15-445Learning/test/storage/grading_b_plus_tree_memory_test.cpp">
+			<Option target="grading_b_plus_tree_memory_test"/>
 		</Unit>
 		<Unit filename="/home/jh/15-445/15-445Learning/test/storage/tmp_tuple_page_test.cpp">
 			<Option target="tmp_tuple_page_test"/>

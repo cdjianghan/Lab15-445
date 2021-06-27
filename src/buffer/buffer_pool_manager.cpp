@@ -12,6 +12,8 @@
 
 #include "buffer/buffer_pool_manager.h"
 
+
+
 namespace bustub {
 
 BufferPoolManager::BufferPoolManager(size_t pool_size, DiskManager *disk_manager, LogManager *log_manager)
@@ -62,10 +64,6 @@ Page *BufferPoolManager::FetchPageImpl(page_id_t page_id) {
         // 必须保证能取出来的victim的pin_count_都为0
         pages_[frame_id].is_dirty_ = false;
         disk_manager_->WritePage(pages_[frame_id].GetPageId(), pages_[frame_id].GetData());
-        if (pages_[frame_id].pin_count_ != 0) {
-          LOG_DEBUG("page id is %d, pin_count is %d.", page_id, pages_[frame_id].pin_count_);
-          throw new Exception("wo gua le ");
-        }
       }
       // 是不是脏的都要进行写回
       page_table_.erase(pages_[frame_id].GetPageId());
@@ -76,7 +74,7 @@ Page *BufferPoolManager::FetchPageImpl(page_id_t page_id) {
   }
   pages_[frame_id].ResetMemory();
   disk_manager_->ReadPage(page_id, pages_[frame_id].GetData());
-  //  pages_[frame_id].is_dirty_ = false;
+//  pages_[frame_id].is_dirty_ = false;
   // LOG_DEBUG("Fetch Page:%d Success ,Fetch Page data:%s", pages_[frame_id].GetPageId(),pages_[frame_id].GetData());
   pages_[frame_id].page_id_ = page_id;
   page_table_[page_id] = frame_id;
@@ -177,11 +175,11 @@ bool BufferPoolManager::DeletePageImpl(page_id_t page_id) {
   if (pages_[frame_id].pin_count_ != 0) {
     return false;
   }
-  //  success in lab1
-  //  pages_[frame_id].ResetMemory();
-  //  free_list_.push_front(frame_id);
-  //  pages_[frame_id].page_id_ = INVALID_PAGE_ID;
-  //  page_table_.erase(page_id);
+//  success in lab1
+//  pages_[frame_id].ResetMemory();
+//  free_list_.push_front(frame_id);
+//  pages_[frame_id].page_id_ = INVALID_PAGE_ID;
+//  page_table_.erase(page_id);
   pages_[frame_id].is_dirty_ = false;
   pages_[frame_id].pin_count_ = 0;
   pages_[frame_id].page_id_ = INVALID_PAGE_ID;

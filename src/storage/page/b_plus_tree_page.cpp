@@ -41,9 +41,9 @@ void BPlusTreePage::SetMaxSize(int size) { max_size_ = size; }
  */
 int BPlusTreePage::GetMinSize() const {
   //区分一下根节点和非根节点
-//    if(GetParentPageId()==INVALID_PAGE_ID){return 1;}
-    return GetMaxSize()/2;
- }
+  //    if(GetParentPageId()==INVALID_PAGE_ID){return 1;}
+  return GetMaxSize() / 2;
+}
 
 /*
  * Helper methods to get/set parent page id

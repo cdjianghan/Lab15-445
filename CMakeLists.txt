@@ -169,3 +169,4 @@ add_custom_target(check-clang-tidy
         -p ${CMAKE_BINARY_DIR}                                            # using cmake's generated compile commands
         )
 add_dependencies(check-clang-tidy gtest bustub_shared)                    # needs gtest headers, compile_commands.json
+
