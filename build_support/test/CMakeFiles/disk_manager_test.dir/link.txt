@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC -Wall -Wextra -Werror -march=native -Wno-unused-parameter -Wno-attributes   -fPIC CMakeFiles/disk_manager_test.dir/storage/disk_manager_test.cpp.o  -o disk_manager_test  -Wl,-rpath,/home/jh/15-445/15-445Learning/build_support/lib ../lib/libbustub_shared.so ../lib/libgmock_main.so ../lib/libthirdparty_murmur3.so ../lib/libgmock.so ../lib/libgtest.so -pthread 
