@@ -1,1 +1,0 @@
-/usr/bin/c++   -fPIC -Wall -Wextra -Werror -march=native -Wno-unused-parameter -Wno-attributes   -fPIC CMakeFiles/rwlatch_test.dir/common/rwlatch_test.cpp.o  -o rwlatch_test  -Wl,-rpath,/home/jh/15-445/15-445Learning/cmake-build-default-15-445/lib ../lib/libbustub_shared.so ../lib/libgmock_main.so ../lib/libthirdparty_murmur3.so ../lib/libgmock.so ../lib/libgtest.so -pthread 

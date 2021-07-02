@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libgmock_main.so -o ../../lib/libgmock_main.so CMakeFiles/gmock_main.dir/src/gmock_main.cc.o  -Wl,-rpath,/home/jh/15-445/15-445Learning/cmake-build-release-15-445/lib: ../../lib/libgmock.so ../../lib/libgtest.so -pthread 
