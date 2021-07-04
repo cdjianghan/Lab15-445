@@ -23,21 +23,22 @@ SeqScanExecutor::SeqScanExecutor(ExecutorContext *exec_ctx, const SeqScanPlanNod
 
 void SeqScanExecutor::Init() {
     iter_ = table_meta_->table_->Begin(exec_ctx_->GetTransaction());
-    end_iter_ = table_meta_->table_->End();}
+    end_iter_ = table_meta_->table_->End();
+}
 
 bool SeqScanExecutor::Next(Tuple *tuple, RID *rid) {
     while (iter_ != end_iter_) {
         *rid = iter_->GetRid();
         *tuple = *iter_;
         ++iter_;
-        if (nullptr == predicate_ || predicate_->Evaluate(tuple, &table_meta_->schema_).GetAs<bool>()) {
-            const Schema *output_scheme = plan_->OutputSchema();
-            std::vector<Value> values(output_scheme->GetColumnCount());
-            const auto &output_columns = output_scheme->GetColumns();
+        if (predicate_ == nullptr  || predicate_->Evaluate(tuple, &table_meta_->schema_).GetAs<bool>()) {
+            const Schema *output_schema = plan_->OutputSchema();
+            std::vector<Value> values(output_schema->GetColumnCount());
+            const auto &output_columns = output_schema->GetColumns();
             for (size_t i = 0; i < values.size(); ++i) {
                 values[i] = output_columns[i].GetExpr()->Evaluate(tuple, &table_meta_->schema_);
             }
-            *tuple = Tuple(values, output_scheme);
+            *tuple = Tuple(values, output_schema);
             return true;
         }
     }

@@ -52,7 +52,7 @@ class UpdateExecutor : public AbstractExecutor {
    */
   Tuple GenerateUpdatedTuple(const Tuple &old_tup) {
     auto update_attrs = plan_->GetUpdateAttr();
-    Schema schema = table_info_->schema_;
+    Schema schema = table_meta_->schema_;
     uint32_t col_count = schema.GetColumnCount();
     std::vector<Value> values;
     for (uint32_t idx = 0; idx < col_count; idx++) {
@@ -79,8 +79,9 @@ class UpdateExecutor : public AbstractExecutor {
   /** The update plan node to be executed. */
   const UpdatePlanNode *plan_;
   /** Metadata identifying the table that should be updated. */
-  const TableMetadata *table_info_;
+  const TableMetadata *table_meta_;
   /** The child executor to obtain value from. */
   std::unique_ptr<AbstractExecutor> child_executor_;
+  std::vector<IndexInfo *> table_indexes_;
 };
 }  // namespace bustub

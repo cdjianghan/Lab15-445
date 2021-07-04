@@ -88,16 +88,25 @@ class Catalog {
 
   /** @return table metadata by name */
   TableMetadata *GetTable(const std::string &table_name) {
+    auto iter =names_.find(table_name);
+    if(iter != names_.end()){
+        auto res = GetTable(iter->second);
+        if (nullptr == res) {
+            throw std::out_of_range("can not find table: " + table_name);
+        }
+        return res;
+    }
+    throw std::out_of_range("can not find table: " + table_name);
 
-      oid_t table_oid = names_[table_name];
-      auto res = tables_[table_oid].get();
-      return res;
   }
 
   /** @return table metadata by oid */
   TableMetadata *GetTable(table_oid_t table_oid) {
-      auto res = tables_[table_oid].get();
-      return res;
+      auto iter = tables_.find(table_oid);
+      if (iter != tables_.end()) {
+          return iter->second.get();
+      }
+      return nullptr;
   }
 
   /**
@@ -115,24 +124,39 @@ class Catalog {
   IndexInfo *CreateIndex(Transaction *txn, const std::string &index_name, const std::string &table_name,
                          const Schema &schema, const Schema &key_schema, const std::vector<uint32_t> &key_attrs,
                          size_t keysize) {
+      // create the b_plus_tree index
       index_oid_t new_index_oid = next_index_oid_++;
-      indexes_[new_index_oid] =
-              std::make_unique<IndexInfo>(
-                      IndexInfo(key_schema,index_name
-                                ,std::make_unique<Index>(new IndexMetadata(index_name,table_name,&schema,key_attrs))
-                                        ,new_index_oid,table_name,keysize));
+      TableMetadata * table_meta_ = GetTable(table_name);
+      auto index_meta_b = new IndexMetadata(index_name,table_name,&schema,key_attrs);
+      auto index_b = new BPLUSTREE_INDEX_TYPE(index_meta_b, bpm_);
+      auto end_iter = table_meta_->table_->End();
+      for (auto iter = table_meta_->table_->Begin(txn); iter != end_iter; ++iter) {
+          // add every entry in table to b_pluss_tree index
+          Tuple key(iter->KeyFromTuple(table_meta_->schema_, key_schema, key_attrs));
+          index_b->InsertEntry(key, iter->GetRid(), txn);
+      }
+      // update the catalog
+
+      indexes_[new_index_oid] = std::make_unique<IndexInfo>(
+                                  IndexInfo(key_schema,index_name
+                                            ,std::make_unique<Index>(index_b)
+                                                    ,new_index_oid,table_name,keysize));
       index_names_[table_name][index_name] = new_index_oid;
       auto res = indexes_[new_index_oid].get();
       return res;
   }
 
   IndexInfo *GetIndex(const std::string &index_name, const std::string &table_name) {
+      if (index_names_.find(table_name) == index_names_.end()) {return nullptr;}
+      if (index_names_[table_name].find(index_name) == index_names_[table_name].end()) {return nullptr;}
+
       index_oid_t index_oid = index_names_[table_name][index_name];
-      auto res = indexes_[index_oid].get();
+      auto res = GetIndex(index_oid);
       return res;
   }
 
   IndexInfo *GetIndex(index_oid_t index_oid) {
+      if (indexes_.find(index_oid) == indexes_.end()) {return nullptr;}
       auto res = indexes_[index_oid].get();
       return res;
   }
@@ -144,8 +168,6 @@ class Catalog {
           res.push_back(indexes_[index_oid].get());
       }
       return res;
-
-
   }
 
  private:
