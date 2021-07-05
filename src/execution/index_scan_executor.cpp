@@ -15,14 +15,13 @@ namespace bustub {
 IndexScanExecutor::IndexScanExecutor(ExecutorContext *exec_ctx, const IndexScanPlanNode *plan)
     : AbstractExecutor(exec_ctx),
     predicate_{plan->GetPredicate()},
-    index_info_{exec_ctx->GetCatalog()->GetIndex(plan->GetIndexOid())}{}
+    index_info_(exec_ctx->GetCatalog()->GetIndex(plan->GetIndexOid())),
+    table_meta_(exec_ctx_->GetCatalog()->GetTable(index_info_->table_name_)){}
 
 void IndexScanExecutor::Init() {
-    table_meta_ = exec_ctx_->GetCatalog()->GetTable(index_info_->table_name_);
     auto *bplustree_index =
             dynamic_cast<BPlusTreeIndex<GenericKey<8>, RID, GenericComparator<8>> *>(index_info_->index_.get());
     iter_ = bplustree_index->GetBeginIterator();
-
 
 }
 

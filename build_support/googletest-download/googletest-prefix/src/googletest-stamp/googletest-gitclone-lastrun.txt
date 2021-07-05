@@ -1,3 +1,0 @@
-repository='https://gitee.com/chenchang/googletest.git'
-module=''
-tag='origin'
