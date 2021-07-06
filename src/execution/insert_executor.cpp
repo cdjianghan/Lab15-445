@@ -17,7 +17,8 @@ namespace bustub {
 
 InsertExecutor::InsertExecutor(ExecutorContext *exec_ctx, const InsertPlanNode *plan,
                                std::unique_ptr<AbstractExecutor> &&child_executor)
-    : AbstractExecutor(exec_ctx),plan_(plan),
+    : AbstractExecutor(exec_ctx),
+    plan_(plan),
     table_meta_(exec_ctx_-> GetCatalog()->GetTable(plan_->TableOid())),
     child_executor_(std::move(child_executor)),
     table_indexes_(exec_ctx_ -> GetCatalog()->GetTableIndexes(table_meta_->name_)){}
@@ -45,7 +46,6 @@ bool InsertExecutor::Next([[maybe_unused]] Tuple *tuple, RID *rid) {
             }else{
                 throw Exception("INSERT, tuple to be inserted is bigger than a page");
             }
-
         }
         return false;
     }

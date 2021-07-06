@@ -79,34 +79,32 @@ class Catalog {
     BUSTUB_ASSERT(names_.count(table_name) == 0, "Table names should be unique!");
     oid_t new_oid = next_index_oid_++;
     names_[table_name] = new_oid;
-    tables_[new_oid] = std::make_unique<TableMetadata>(
-            TableMetadata(schema,table_name,
-                          std::make_unique<TableHeap>(bpm_, lock_manager_, log_manager_, txn),new_oid));
+    tables_[new_oid] = std::make_unique<TableMetadata>(TableMetadata(
+        schema, table_name, std::make_unique<TableHeap>(bpm_, lock_manager_, log_manager_, txn), new_oid));
     auto res = tables_[new_oid].get();
     return res;
   }
 
   /** @return table metadata by name */
   TableMetadata *GetTable(const std::string &table_name) {
-    auto iter =names_.find(table_name);
-    if(iter != names_.end()){
-        auto res = GetTable(iter->second);
-        if (nullptr == res) {
-            throw std::out_of_range("can not find table: " + table_name);
-        }
-        return res;
+    auto iter = names_.find(table_name);
+    if (iter != names_.end()) {
+      auto res = GetTable(iter->second);
+      if (nullptr == res) {
+        throw std::out_of_range("can not find table: " + table_name);
+      }
+      return res;
     }
     throw std::out_of_range("can not find table: " + table_name);
-
   }
 
   /** @return table metadata by oid */
   TableMetadata *GetTable(table_oid_t table_oid) {
-      auto iter = tables_.find(table_oid);
-      if (iter != tables_.end()) {
-          return iter->second.get();
-      }
-      return nullptr;
+    auto iter = tables_.find(table_oid);
+    if (iter != tables_.end()) {
+      return iter->second.get();
+    }
+    return nullptr;
   }
 
   /**
@@ -124,69 +122,56 @@ class Catalog {
   IndexInfo *CreateIndex(Transaction *txn, const std::string &index_name, const std::string &table_name,
                          const Schema &schema, const Schema &key_schema, const std::vector<uint32_t> &key_attrs,
                          size_t keysize) {
-      // create the b_plus_tree index
-      index_oid_t new_index_oid = next_index_oid_++;
-      auto * table_meta = GetTable(table_name);
-      auto index_meta_b = new IndexMetadata(index_name,table_name,&schema,key_attrs);
-      auto index_b = new BPLUSTREE_INDEX_TYPE(index_meta_b, bpm_);
-      auto end_iter = table_meta->table_->End();
-      for (auto iter = table_meta->table_->Begin(txn); iter != end_iter; ++iter) {
-          // add every entry in table to b_pluss_tree index
-          Tuple key(iter->KeyFromTuple(table_meta->schema_, key_schema, key_attrs));
-          index_b->InsertEntry(key, iter->GetRid(), txn);
-      }
-      // update the catalog
-      auto res = new IndexInfo(key_schema,index_name,std::unique_ptr<Index>(index_b),new_index_oid,table_name,keysize);
-      indexes_[new_index_oid] = std::make_unique<IndexInfo>(res);
-      index_names_[table_name][index_name] = new_index_oid;
-//      auto res = indexes_[new_index_oid].get();
-      return res;
-
-
-//      auto *table_meta = GetTable(table_name);
-//      auto index_meta_p = new IndexMetadata(index_name, table_name, &schema, key_attrs);
-//      auto index_p = new BPLUSTREE_INDEX_TYPE(index_meta_p, bpm_);
-//      auto end_iter = table_meta->table_->End();
-//      for (auto iter = table_meta->table_->Begin(txn); iter != end_iter; ++iter) {
-//          Tuple key(iter->KeyFromTuple(table_meta->schema_, key_schema, key_attrs));
-//          index_p->InsertEntry(key, iter->GetRid(), txn);
-//      }
-//      auto res =
-//              new IndexInfo(key_schema, index_name, std::unique_ptr<Index>(index_p), next_index_oid_++, table_name, keysize);
-//      auto iter = index_names_.find(table_name);
-//      if (iter == index_names_.end()) {
-//          index_names_.insert(std::make_pair(table_name, std::unordered_map<std::string, index_oid_t>()));
-//          iter = index_names_.find(table_name);
-//      }
-//      auto &name2oid = iter->second;
-//      BUSTUB_ASSERT(name2oid.count(index_name) == 0, "index names should be unique!");
-//      name2oid.insert(std::make_pair(index_name, res->index_oid_));
-//      indexes_.insert(std::make_pair(res->index_oid_, std::unique_ptr<IndexInfo>(res)));
-//      return res;
+    auto *table_meta = GetTable(table_name);
+    auto index_meta_p = new IndexMetadata(index_name, table_name, &schema, key_attrs);
+    auto index_p = new BPLUSTREE_INDEX_TYPE(index_meta_p, bpm_);
+    auto end_iter = table_meta->table_->End();
+    for (auto iter = table_meta->table_->Begin(txn); iter != end_iter; ++iter) {
+      Tuple key(iter->KeyFromTuple(table_meta->schema_, key_schema, key_attrs));
+      index_p->InsertEntry(key, iter->GetRid(), txn);
+    }
+    auto res =
+        new IndexInfo(key_schema, index_name, std::unique_ptr<Index>(index_p), next_index_oid_++, table_name, keysize);
+    auto iter = index_names_.find(table_name);
+    if (iter == index_names_.end()) {
+      index_names_.insert(std::make_pair(table_name, std::unordered_map<std::string, index_oid_t>()));
+      iter = index_names_.find(table_name);
+    }
+    auto &name2oid = iter->second;
+    BUSTUB_ASSERT(name2oid.count(index_name) == 0, "index names should be unique!");
+    name2oid.insert(std::make_pair(index_name, res->index_oid_));
+    indexes_.insert(std::make_pair(res->index_oid_, std::unique_ptr<IndexInfo>(res)));
+    return res;
   }
 
   IndexInfo *GetIndex(const std::string &index_name, const std::string &table_name) {
-      if (index_names_.find(table_name) == index_names_.end()) {return nullptr;}
-      if (index_names_[table_name].find(index_name) == index_names_[table_name].end()) {return nullptr;}
+    if (index_names_.find(table_name) == index_names_.end()) {
+      return nullptr;
+    }
+    if (index_names_[table_name].find(index_name) == index_names_[table_name].end()) {
+      return nullptr;
+    }
 
-      index_oid_t index_oid = index_names_[table_name][index_name];
-      auto res = GetIndex(index_oid);
-      return res;
+    index_oid_t index_oid = index_names_[table_name][index_name];
+    auto res = GetIndex(index_oid);
+    return res;
   }
 
   IndexInfo *GetIndex(index_oid_t index_oid) {
-      if (indexes_.find(index_oid) == indexes_.end()) {return nullptr;}
-      auto res = indexes_[index_oid].get();
-      return res;
+    if (indexes_.find(index_oid) == indexes_.end()) {
+      return nullptr;
+    }
+    auto res = indexes_[index_oid].get();
+    return res;
   }
 
   std::vector<IndexInfo *> GetTableIndexes(const std::string &table_name) {
-      std::vector<IndexInfo *> res;
-      for(const auto& index_name:index_names_[table_name]){
-          index_oid_t index_oid = index_name.second;
-          res.push_back(indexes_[index_oid].get());
-      }
-      return res;
+    std::vector<IndexInfo *> res;
+    for (const auto &index_name : index_names_[table_name]) {
+      index_oid_t index_oid = index_name.second;
+      res.push_back(indexes_[index_oid].get());
+    }
+    return res;
   }
 
  private:

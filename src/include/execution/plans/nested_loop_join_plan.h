@@ -56,7 +56,6 @@ class NestedLoopJoinPlanNode : public AbstractPlanNode {
  private:
   /** The join predicate. */
   const AbstractExpression *predicate_;
-
 };
 
 }  // namespace bustub

@@ -53,6 +53,5 @@ class DeleteExecutor : public AbstractExecutor {
   std::unique_ptr<AbstractExecutor> child_executor_;
   const TableMetadata *table_meta_;
   std::vector<IndexInfo *> table_indexes_;
-
 };
 }  // namespace bustub

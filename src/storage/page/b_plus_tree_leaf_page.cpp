@@ -93,6 +93,15 @@ const MappingType &B_PLUS_TREE_LEAF_PAGE_TYPE::GetItem(int index) {
  */
 INDEX_TEMPLATE_ARGUMENTS
 int B_PLUS_TREE_LEAF_PAGE_TYPE::Insert(const KeyType &key, const ValueType &value, const KeyComparator &comparator) {
+  // there just have a very strange bug in in index_scan,I just jump out the
+  // place to provent the bug happen。
+  if (GetSize() == 0) {
+    array[0].first = key;
+    array[0].second = value;
+    IncreaseSize(1);
+    return GetSize();
+  }
+
   int index;
   int l = 0;
   int r = GetSize() - 1;

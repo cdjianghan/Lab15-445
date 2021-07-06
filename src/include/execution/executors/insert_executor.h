@@ -50,6 +50,6 @@ class InsertExecutor : public AbstractExecutor {
   TableMetadata *table_meta_;
   std::unique_ptr<AbstractExecutor> child_executor_;
   std::vector<IndexInfo *> table_indexes_;
-//  IndexIterator<GenericKey<8>, RID, GenericComparator<8>> index_iter_;
+  //  IndexIterator<GenericKey<8>, RID, GenericComparator<8>> index_iter_;
 };
 }  // namespace bustub
