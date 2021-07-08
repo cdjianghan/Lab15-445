@@ -50,7 +50,7 @@ class NestedIndexJoinPlanNode : public AbstractPlanNode {
   /** @return the table oid for the inner table of the nested index join */
   table_oid_t GetInnerTableOid() const { return inner_table_oid_; }
 
-  /** @return the index associated with the nested index join */
+  /** @return the index associated with the nested index join , inner table index */
   std::string GetIndexName() const { return index_name_; }
 
   /** @return Schema with needed columns in from the outer table */
