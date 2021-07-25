@@ -20,6 +20,7 @@
 #include <unordered_map>
 #include <utility>
 #include <vector>
+#include <set>
 
 #include "common/rid.h"
 #include "concurrency/transaction.h"
@@ -48,7 +49,11 @@ class LockManager {
     std::list<LockRequest> request_queue_;
     std::condition_variable cv_;  // for notifying blocked transactions on this rid
     bool upgrading_ = false;
+    int sharelock_count_ = 0;
+    bool is_writing_ = false;
   };
+
+
 
  public:
   /**
@@ -131,6 +136,11 @@ class LockManager {
   /** Runs cycle detection in the background. */
   void RunCycleDetection();
 
+  // (+)
+  std::list<LockRequest>::iterator GetIterator(std::list<LockRequest> &request_queue, txn_id_t txn_id);
+  void DeleteNode(txn_id_t txn_id);
+  bool dfs(txn_id_t txn_id);
+
  private:
   std::mutex latch_;
   std::atomic<bool> enable_cycle_detection_;
@@ -140,6 +150,14 @@ class LockManager {
   std::unordered_map<RID, LockRequestQueue> lock_table_;
   /** Waits-for graph representation. */
   std::unordered_map<txn_id_t, std::vector<txn_id_t>> waits_for_;
+  /** The nodes that is not included in a cycle */
+  std::set<txn_id_t> safe_set_;
+  /** all txns(nodes) */
+  std::set<txn_id_t> txn_set_;
+  /** all suspected txns in one dfs run */
+  std::unordered_set<txn_id_t> active_set_;
+  /** which Record a txn is waiting for, use to notify waiting txn */
+  std::unordered_map<txn_id_t, RID> require_record_;
 };
 
 }  // namespace bustub
